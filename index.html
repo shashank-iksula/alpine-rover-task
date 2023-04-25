@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <title>Land Rover | The Range Rover</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    [x-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="font-avenir max-w-[2560px] m-auto relative" x-data="{productItem: [], filtereColorData:[]}">
+    <!-- Header -->
+    <header
+      class="bg-[#0C121C] text-[#D2D1CC] flex items-center justify-center  h-10 max-[768px]:text-[12px] px-4">
+      <div class=" flex items-center justify-center  sm:text-center sm:w-full md:w-full lg:w-full lg:m-auto md:m-auto xl:w-full">
+        <p
+          class=" font-light hover:underline cursor-pointer text-[12px] tex-center sm:text-[11px] text-white/90">
+          ORDER BEFORE MIDDAY FOR NEXT DAY DELIVERY. T&CS APPLY.</p>
+      </div>
+      <div class="flex items-center justify-between w-1/3  max-[768px]:hidden mx-4 lg:w-0 md:w-0 sm:w-0 lg:hidden xl:hidden">
+        <div class="max-[768px]:hidden lg:hidden">
+          |
+        </div>
+        <p
+          class="font-light hover:underline cursor-pointer sm:text-[10px] text-[12px] lg:hidden max-[768px]:hidden text-white/90">
+          FREE DELIVERY WHEN YOU SPEND OVER £50</p>
+        <div class=" max-[768px]:hidden lg:hidden">
+          |
+        </div>
+      </div>
+      <div class="w-1/3 flex items-center justify-center  xl:hidden  lg:w-0 md:w-0 ">
+        <p
+          class="font-light hover:underline cursor-pointer sm:text-[10px] text-[12px] lg:hidden text-white/90">
+          FREE RETURNS WITHIN 30 DAYS</p>
+      </div>
+    </header>
+    <!-- Second Header -->
+    <section class="flex items-center justify-between  px-4" x-data="header">
+      <article class="flex items-center justify-start gap-8 w-2/6 lg:w-4/6">
+        <figure class="w-[60px] h-[60px] sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:top-16  sm:w-[50px] sm:h-[50px]">
+          <img src="./assets/logo.png" alt="none" class="w-full h-full object-contain" />
+        </figure>
+
+        <figure class="w-[60px] h-[60px] fixed top-0 z-[9999] xl:hidden 2xl:hidden lg:hidden md:block sm:fixed sm:top-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2" id="logobar" x-cloak x-bind:class="isMenuBarOpen ? 'opacity-100': 'opacity-0'">
+          <img src="./assets/logo.png" alt="none" class="w-full h-full object-contain" />
+        </figure>
+        <div class="flex items-center justify-center gap-4 fixed top-4 left-40 z-[999] transition-all 0s ease-linear xl:hidden 2xl:hidden lg:hidden md:block cursor-pointer sm:fixed sm:top-4 sm:left-4" x-cloak x-bind:class="isMenuBarOpen ? 'opacity-100' : 'opacity-0 transition ease-linear'" >
+        <i class="fa-solid fa-xmark" id="hemburger1" @click="closeHemburger()"></i>
+          <span class="font-thin tracking-widest text-[12px]">Menu</span>
+        </div>
+        <div class="lg:hidden xl:hidden 2xl:hidden md:block md:fixed md:top-4 md:right-4 z-[999]" x-cloak x-bind:class="isMenuBarOpen ? 'opacity-100' : 'opacity-0'">
+          <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+        </div>
+        <!-- Hemburger Icons -->
+        <div class="flex items-center justify-center gap-4 md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden top-14 left-40 cursor-pointer">
+          <i class="fa-solid fa-bars" id="hemburger" @click="openHemburger()"></i>
+          <span class="font-thin tracking-widest text-[12px]">Menu</span>
+        </div>
+      
+        <!-- The Rnage Rover || Defender || Discovery -->
+        <div
+          class="flex lg:items-center xl:items-center justify-center gap-8 md:fixed md:flex-col md:w-full md:h-full md:flex-start md:justify-start md:left-0 md:top-0  md:m-0 md:bg-white md:z-50 md:items-start  lg:relative lg:top-0  lg:flex-row lg:h-[40px] xl:h-[40px] xl:relative xl:top-0 xl:flex-row md:-translate-x-[1200px] lg:translate-x-0 xl:translate-x-0 md:py-6" id="targetMenu">  
+           <div class="flex items-center justify-center gap-10 lg:flex-row xl:flex-row md:mt-16 md:flex-col  md:py-8 lg:mt-0 md:border-t-2  md:border-black/30 md:w-full lg:border-none xl:border-none lg:py-0 xl:py-0 h-[40px] md:h-[200px] md:gap-0">
+            <div class="uppercase text-[10px] opacity-50 md:w-full md:border-t-2 md:border-black/30 md:border-b-2 md:py-4 relative">
+              <a href="#" x-on:mouseover="$store.headerItem.getName($el)" class="tracking-widest hover:underline md:text-[12px] lg:text-[12px] xl:text-[12px] sm:text-[10px] md:ml-6 relative md:w-full block "><pre>range rover</pre></a>
+              <i class="fa-solid fa-angle-right  md:block lg:hidden xl:hidden 2xl:hidden md:absolute md:right-4 md:top-4"></i>
+              <!-- The Hover Page -->
+            </div>
+            <div class="uppercase text-[10px] md:w-full md:border-b-2 md:border-black/20 md:flex md:items-center md:justify-start md:py-4 relative">
+              <a href="#" x-on:mouseover="$store.headerItem.getName($el)" class="tracking-widest hover:underline md:text-[12px]  lg:text-[12px] xl:text-[12px] sm:text-[10px] md:ml-6 relative md:w-full text-[primary-color]"><pre>defender</pre></a>
+              <i class="fa-solid fa-angle-right md:block lg:hidden xl:hidden 2xl:hidden md:absolute md:right-4 md:top-4"></i>
+            </div>
+            <div class="uppercase text-[10px] md:w-full md:border-b-2 md:border-black/20 md:flex md:items-center md:justify-start md:py-4 relative">
+              <a href="#" x-on:mouseover="$store.headerItem.getName($el)" class="tracking-widest hover:underline md:text-[12px]  lg:text-[12px] xl:text-[12px] sm:text-[10px] md:ml-6 relative md:w-full text-[primary-color]"><pre>discovery</pre></a>
+              <i class="fa-solid fa-angle-right md:block lg:hidden xl:hidden 2xl:hidden md:absolute md:right-4 md:top-4"></i>
+            </div>
+            <div class="flex items-start justify-start w-full md:ml-6 gap-2 md:py-4   md:border-b-2 md:border-black/20">
+                 <i class="fa-solid fa-user md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden"></i>
+                 <span class="uppercase md:text-[12px] sm:text-[10px] sm:block  md:block  lg:hidden xl:hidden 2xl:hidden 3xl:hidden cursor-pointer">account</span>
+           </div>
+           </div>
+        </div>
+      </article>
+      <!-- The Menu Bar -->
+      <section class="absolute top-14 flex items-start justify-start z-50 bg-white md:w-full sm:w-full lg:w-full left-0 px-4 md:flex-col lg:flex-row xl:flex-row py-10 my-10 lg:z-[9999] md:fixed md:top-10 w-full h-[350px]"
+        x-show="$store.headerItem.showMenuBar && $store.headerItem.filteredData.length>0">
+        <div class="flex items-center justify-center lg:flex-row  md:flex-col">
+          <button class="font-light items-center justify-center  lg:hidden xl:hidden 2xl:hidden md:flex fixed left-4 top-20 md:text-[13px] sm:text-[12px]" x-cloak @click="$store.headerItem.closeSubmenu()">
+            <i class="fa-solid fa-angle-left mx-2"></i>
+            <span>Back</span>
+          </button>
+          <div class="absolute w-full bg-black/30 h-[1px] top-1 left-0 md:hidden"></div>
+         
+          <template x-for="(item,currentIndex) in $store.headerItem.filteredData">
+            <div class="flex items-start justify-start sm:items-center md:items-center lg:items-center flex-col 2xl:h-[400px] sm:h-[120px] md:h-[130px] lg:h-[220px] lg:flex-col  xl:h-[300px] w-full py-10 sm:py-0 md:py-0 gap-10 mx-4 md:flex-row sm:flex-row "
+              x-on:mouseover="getIndex(currentIndex)">
+              <figure class="relative">
+                <img :src="item.img" class="w-full h-full object-cover sm:w-[200px] sm:h-[100px] md:w-[200px] md:h-[100px] lg:w-[200px] lg:h-[100px]"/>
+                 
+                <div x-show="currentIndex === activeIndex" class="absolute w-full h-full bg-black/80 opacity-50 top-0">
+                </div>
+              </figure>
+              <p x-text="item.title"
+                class="uppercase text-[12px]  py-2 opacity-50 flex items-center justify-center md:text-left text-center w-full sm:text-[10px]"></p>
+            </div>
+  
+          </template>
+        </div>
+      </section>
+      <!-- The User and the Cart Icons -->
+      <article class="flex items-center justify-end gap-6 w-4/6 py-4" x-on:mouseover="$store.headerItem.filteredData=[]">
+        <div class="flex items-center justify-center gap-2 relative">
+          <div  @click="toggleBasket()" class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+            <span x-show="isBasketOpen" class="text-[12px] font-light sm:hidden md:hidden lg:block xl:block">()</span>
+            <span class="uppercase text-[12px] sm:hidden md:block lg:hidden xl:inline-block 2xl:inline-block cursor-pointer">basket</span>
+          </div>
+          <div class="absolute top-10 z-[9999] h-[100px] w-[320px] -left-40 lg:-left-[260px] xl:top-9 sm:top-8" x-show="isBasketOpen">
+                <div class="flex items-center justify-center text-center bg-white w-full h-full text-[12px] ">
+                  <h1>YOU HAVE NO ITEMS IN YOUR SHOPPING BASKET.</h1>
+                </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+           <div class="flex items-center justify-center gap-2">
+              <i class="fa-solid fa-user sm:hidden lg:hidden md:hidden"></i>
+             <span class="uppercase text-[12px] sm:hidden lg:hidden md:hidden xl:inline-block 2xl:inline-block cursor-pointer">account</span>
+           </div>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- Search Box -->
+    <div class="w-full px-4 relative">
+      <input type="search"
+        class="w-full  lg:h-10 md:h-10 xl:h-10 2xl:h-10 border border-[#333] outline-none uppercase opacity-50 px-4 focus:border-[#4ea3c7]/[.84] sm:h-8"
+        placeholder="search" />
+      <i class="fa-solid fa-magnifying-glass absolute right-16 top-2 text-xl cursor-pointer sm:top-0"></i>
+    </div>
+    <!-- Home > Range Rover Section -->
+    <div class="px-10 py-4">
+      <ul class="flex items-center justify-start px-4 gap-4 sm:px-0 r sm:items-center sm:gap-2 md:gap-2 lg:gap-3 xl:gap-4 2xl:gap-4 3xl:gap-4 sm:w-full">
+        <li>
+          <a href="#" class="text-black/70 capitalize tracking-widest sm:tracking-normal sm:text-[8px] md:text-[11px]  lg:text-[11px] xl:text-[11px] 2xl:text-[11px] 3xl:text-[11px] hover:underline">home </a>
+        </li>
+        <!-- <li class="text-[12px] text-black/50 sm:text-[8px]">
+          >
+        </li> -->
+        <i class="fa-solid fa-angle-right fa-xs opacity-30 sm:mx-[2px]"></i>
+        <li>
+          <a href="#" class="text-black/70 capitalize tracking-widest sm:tracking-normal text-[11px] sm:text-[9px] hover:underline">range rover</a>
+        </li>
+        <!-- <li class="text-[12px] text-black/50 sm:text-[8px]">
+          >
+        </li> -->
+        <i class="fa-solid fa-angle-right fa-xs opacity-30 sm:mx-[2px]"></i>
+        <li>
+          <a href="#" class="text-black/70 capitalize tracking-widest sm:tracking-normal text-[11px] sm:text-[9px] hover:underline">the range rover
+            collection</a>
+        </li>
+      </ul>
+      <!-- Filter Section -->
+      <div class="px-4 flex items-center justify-between py-100 relative sm:flex-col my-4 sm:px-0 sm:gap-4" x-data="header" x-cloak>
+        <div class="flex items-center justify-center sm:justify-around sm:items-center  gap-4 sm:w-full sm:py-2 sm:px-0 sm:border-2 sm:border-black/40" x-data="product">
+          <span class="text-black/75 capitalize text-[12px] sm:text-[10px]">filter by:</span>
+          <span class="uppercase text-black/75 text-[12px] cursor-pointer sm:text-[9px] sm:w-[110px]" @click="colorToggleHandler()">colour 
+              <i  x-show="!showColor" class="fa-solid fa-angle-down mx-2"></i>
+              <i x-show="showColor" class="fa-solid fa-angle-up mx-2"></i>
+            </span>
+          <span x-show="clearFilter"><a href="#" class="text-blue-400 hover:underline sm:text-[10px]"
+              @click="productItem = resetHandler()">Clear Filter</a></span>
+          <template class="mx-4 border-2" x-if="showColor">
+            <div 
+              class="flex items-center justify-start gap-2 py-2 px-4 absolute border-2 top-8 left-20 cursor-pointer sm:px-6 sm:py-2 sm:left-[50%] bg-white"
+              x-on:click="colorToggleHandler()">
+              <span class="w-[50px] h-[20px] bg-black "></span>
+              <p class="uppercase text-black/60 sm:text-[9px] w-full py-2 px-2 md:px-1"
+                x-on:click="productItem = filteredByColorHandler($el), filterByColor=true, clearFilterHandler()">black
+              </p>
+            </div>
+          </template>
+        </div>
+
+        <div class="flex items-center justify-center gap-4 sm:w-full sm:py-2 sm:px-0 sm:border-2 sm:border-black/40 sm:justify-around w-[250px]" x-data="product" >
+          <label class="text-black/75 capitalize text-[12px] sm:text-[10px]">sort by:</label>
+           <div x-data="{category: ''}">
+            <select class="outline-none bg-white text-[12px] text-black/80 sm:text-[9px] focus-within:border-[1px] focus-within:border-[#4ea3c7]/[.54] px-2" x-on:change="productItem = filterByPrice(category)" x-ref="category" x-model="category">
+              <option class="uppercase text-black/80 text-[12px] sm:text-[9px]" value="pos" selected="position">POSITION</option>
+              <option class="uppercase text-black/80 text-[12px] sm:text-[9px]" value="nameasc">PRODUCT NAME A - Z</option>
+              <option class="uppercase text-black/80 text-[12px] sm:text-[9px]" value="namedesc">PRODUCT NAME Z - A</option>
+              <option class="uppercase text-black/80 text-[12px] sm:text-[9px]" value="asc">PRICE LOW TO HIGH</option>
+              <option class="uppercase text-black/80 text-[12px] sm:text-[9px]" value="desc">PRICE HIGH TO LOW</option>
+            </select>
+           </div>
+        </div>
+
+      </div>
+      <!-- Underline -->
+      <div class="w-full h-[1px] bg-black/30"></div>
+    </div>
+
+    <!-- Main Product Section -->
+    <main class="max-w-[2560px]  px-10 flex items-center justify-center flex-col m-auto" x-data="product" x-on:mouseover="$store.headerItem.filteredData=[]">
+      <div class="px-4 flex items-center justify-start gap-10 py-10 flex-wrap m-auto w-full lg:justify-center"
+        x-data="productItem= products">
+        <template x-for="(product,index) in productItem[0]">
+          <article class="w-[260px] h-[350px] flex items-center justify-center flex-col">
+            <figure class="w-full h-[220px] relative cursor-pointer" x-on:mouseover="$store.headerItem.openImage(index)" x-on:mouseout="$store.headerItem.closeImage()">
+              <img :src="product.img" alt="none" class="w-full h-full object-cover absolute top-0 left-0"/>
+
+              <img x-show="product.img1 && $store.headerItem.changeImage && index === $store.headerItem.activeIndex" :src="product.img1" alt="none" class="w-full h-full object-cover absolute top-0 left-0"/>
+            </figure>
+            <div class="w-full h-[1px] bg-black/30 mt-10 mb-4"></div>
+            <div class="w-full h-10">
+              <p x-text="product.title" class="uppercase text-[13px] tracking-widest text-center text-[#0C121C]"></p>
+              <div class="flex items-center justify-center">
+                <span>£</span>
+                <p x-text="product.price" class="text-center my-2 text-[#0C121C]"></p>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <!-- Page Section -->
+      <aside class="flex items-center justify-start text-[#0C121C] gap-4 px-4 py-4 w-full">
+        <p class="capitalize text-[#0C121C]/80 tracking-widest text-[12px]">show</p>
+        <div class="flex items-center justify-start relative border-[1px] border-black/30 px-2 py-1 focus:border-none focus:outline-none after:content-['\00a0'] after:bg-black/40 after:absolute after:top-0 after:left-[34px] after:overflow-hidden after:h-[26px] after:z-[9999] after:w-[1px] ">
+          <!-- <p class="border-[1px] border-black/50 px-4 py-2 text-[10px] w-[30px] h-[30px] flex items-center justify-center">16</p>
+            <i class="fa-solid fa-angle-down border-[1px] border-black/50 px-4 py-2 w-[30px] h-[30px] flex items-center justify-center text-[#0C121C]"></i> -->
+          <select x-on:change="refreshHandler($el)" class="px-1 bg-white border-none outline-none text-[14px]">
+            <option value="16" class="text-[14px]">16</option>
+            <option value="30" class="text-[14px]">30</option>
+          </select>
+        </div>
+        <p class="text-[12px] text-[#0C121C]/80 tracking-widest">per page</p>
+      </aside>
+    </main>
+    <!-- Footer TOP -->
+    <footer class="primary-color text-[#FFF]" x-data="header">
+      <main class="flex items-start justify-center max-w-[2560px] gap-10 py-10 m-auto flex-wrap lg:flex-nowrap lg:flex-col lg:items-center lg:gap-0">
+        <div class="flex items-start  justify-start flex-col lg:border-[1px] lg:border-white/30 lg:w-11/12 lg:items-center cursor-pointer relative" >
+          <div class="flex items-center justify-center w-full">
+            <h4 class="uppercase font-bold text-[14px] w-full text-center lg:py-4 " @click="openFooter(0)">customer service</h4>
+            <i x-show="activeIndex !== 0" class="fa-solid fa-plus absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer"></i>
+            <i x-show="activeIndex === 0" class="fa-solid fa-xmark  z-[9999] p-2 xl:hidden 2xl:hidden lg:block absolute right-4 top-2 3xl:hidden  4xl:hidden" @click="closeFooter()"></i>
+          </div>
+          <!-- x-show="activeTarget == 0 && isFooterOpen" -->
+          <ul class="uppercase text-[9px] font-bold py-2 lg:flex lg:items-center  lg:justify-center lg:flex-col xl:flex xl:flex-col 2xl:flex 2xl:flex-col"  x-bind:class="isFooterOpen && activeIndex == 0 ? 'hidden' : 'lg:hidden'">
+            <li class="py-2  lg:py-3">
+              <a href="#" class="tracking-widest hover:underline">contact us</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="tracking-widest hover:underline">track my order</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="tracking-widest hover:underline">terms and conditions</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="tracking-widest hover:underline">delivery and returns</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="tracking-widest hover:underline">warranty information</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Range Rover -->
+        <div class="lg:flex lg:border-[1px] lg:border-white/30  lg:flex-col lg:w-11/12 lg:items-center relative  cursor-pointer" id="main_footer_2">
+          <div class="flex items-center justify-center w-full">
+            <h4 class="uppercase font-bold text-[14px] xl:text-left w-full lg:text-center lg:py-4" @click="openFooter(1)">range rover</h4>
+            <i x-show="activeIndex !== 1" class="fa-solid fa-plus absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer"></i>
+            <i x-show="activeIndex === 1" class="fa-solid fa-xmark absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer" @click="closeFooter()"></i>
+          </div>
+          <ul class="uppercase text-[9px] font-bold py-2 lg:flex lg:items-center  lg:justify-center lg:flex-col xl:flex xl:flex-col"  x-bind:class="isFooterOpen && activeIndex == 1? 'hidden' : 'lg:hidden'">
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">the range rover collection</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">gifts</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">stories</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Defender -->
+        <div class="lg:flex lg:border-[1px] lg:border-white/30 lg:flex-col lg:w-11/12 lg:items-center relative  cursor-pointer" id="main_footer_3" >
+          <div class="flex items-center justify-center w-full">
+            <h4 class="uppercase font-bold text-[14px] xl:text-left w-full lg:text-center lg:py-4" @click="openFooter(2)">defender</h4>
+            <i x-show="activeIndex !== 2" class="fa-solid fa-plus absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer"></i>
+            <i x-show="activeIndex === 2" class="fa-solid fa-xmark absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer" @click="closeFooter()"></i>
+          </div>
+          <ul class="uppercase text-[9px] font-bold py-2 lg:flex lg:items-center  lg:justify-center lg:flex-col xl:flex xl:flex-col"  x-bind:class="isFooterOpen && activeIndex == 2? 'hidden' : 'lg:hidden'">
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">the defender collection</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">scale models</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">apparel</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">lifestyle</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">pets</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">75th anniversary collection</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">gifts</a>
+            </li>
+            <li class="py-2 lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">stories</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Discover -->
+        <div class="lg:flex lg:border-[1px] lg:border-white/30 lg:w-11/12 lg:items-center  lg:flex-col relative  cursor-pointer">
+          <div class="flex items-center justify-center w-full">
+            <h4 class="uppercase font-bold text-[14px] xl:text-left w-full lg:text-center lg:py-4" @click="openFooter(3)">discovery</h4>
+            <i x-show="activeIndex !== 3" class="fa-solid fa-plus absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer"></i>
+            <i x-show="activeIndex === 3" class="fa-solid fa-xmark absolute right-4 top-2 xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block p-2 cursor-pointer" @click="closeFooter()"></i>
+          </div>
+          <ul class="uppercase text-[9px] font-bold py-2 lg:flex lg:items-center  lg:justify-center lg:flex-col xl:flex xl:flex-col" id="footer_2" x-bind:class="isFooterOpen && activeIndex == 3? 'hidden' : 'lg:hidden'">
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">the discovery collection</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">apparel</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">lifestyle</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">gifts</a>
+            </li>
+            <li class="py-2  lg:py-3">
+              <a href="#" class="hover:underline tracking-widest">stories</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Account -->
+        <div  id="main_footer_5" class="lg:flex lg:border-[1px] lg:border-white/30 lg:w-11/12 lg:items-center lg:flex-col relative  cursor-pointer">
+          <div class="flex items-center justify-center w-full">
+            <h4 class="uppercase font-bold text-[14px] xl:text-left w-full lg:text-center lg:py-4" @click="openFooter(4)">account</h4>
+            <i x-show="activeIndex !== 4" class="fa-solid fa-plus absolute xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block right-4 top-2 p-2 cursor-pointer"></i>
+            <i x-show="activeIndex === 4" class="fa-solid fa-xmark absolute right-4 top-2 xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:block p-2 cursor-pointer" @click="closeFooter()"></i>
+          </div>
+          <ul class="uppercase text-[9px] font-bold py-2 lg:flex lg:items-center  lg:justify-center lg:flex-col xl:flex xl:flex-col" id="footer_2" x-bind:class="isFooterOpen && activeIndex == 4? 'hidden' : 'lg:hidden'">
+            <!-- <a href="#" class="hover:underline tracking-widest uppercase text-[9px]">my account</a> -->
+            <li>
+              <a href="#" class="hover:underline tracking-widest">my account</a>
+            </li>
+          </ul>
+         
+          <form class="flex items-center justify-start gap-2 my-4 flex-wrap  lg:items-center  lg:justify-center lg:flex-col lg:hidden">
+            <div class="relative">
+              <i
+                class="fa-regular fa-envelope text-black/40 absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2"></i>
+              <input type="email" placeholder="enter your email address"
+                class="px-10 py-2 text-[10px] w-[200px] h-[40px] text-[#0C121C] placeholder:uppercase outline-none border-none" />
+            </div>
+
+            <button
+              class="w-[125px] h-[40px] bg-white text-[#0C121C] uppercase text-[12px] tracking-widest">subscribe</button>
+          </form>
+          <span class="text-[9px] capitalize font-light lg:hidden xl:hidden 2xl:hidden 3xl:hidden 3xl:overflow-hidden">this site is protected by re<span>captch</span> and the
+            <span>google</span> <span class="underline">privacy policy</span> and <span class="underline"><br>terms and
+              service apply.</span></span>
+        </div>
+      </main>
+      <form class="flex items-center justify-start gap-2 my-4 flex-wrap  lg:items-center  lg:justify-center lg:flex-col xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden lg:flex w-11/12 lg:m-auto ">
+        <div class="relative lg:w-full" >
+          <i
+            class="fa-regular fa-envelope text-black/40 absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2"></i>
+          <input type="email" placeholder="enter your email address"
+            class="px-10 py-2 text-[10px] w-[200px] h-[40px] text-[#0C121C] placeholder:uppercase outline-none border-none lg:w-full" />
+        </div>
+
+        <button
+          class="w-[125px] h-[40px] bg-white text-[#0C121C] uppercase text-[12px] tracking-widest lg:flex lg:w-full lg:items-center lg:justify-center lg:my-4">subscribe</button>
+      </form>
+      <span class="text-[9px] capitalize font-light xl:hidden 2xl:hidden 3xl:hidden  4xl:hidden">this site is protected by re<span>captch</span> and the
+        <span>google</span> <span class="underline">privacy policy</span> and <span class="underline"><br>terms and
+          service apply.</span></span>
+      <!-- The Social Icons -->
+      <div class="flex items-center justify-center gap-4 lg:pb-10">
+        <article class="w-[40px] cursor-pointer">
+          <i class="fa-brands fa-twitter fa-2x"></i>
+        </article>
+        <article class="w-[40px] cursor-pointer">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </article>
+        <article class="w-[40px] cursor-pointer">
+          <i class="fa-brands fa-youtube fa-2x"></i>
+        </article>
+        <article class="w-[40px] cursor-pointer">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </article>
+      </div>
+      <!-- Carrers | News  -->
+      <div class="pt-6 pb-20 md:hidden lg:hidden sm:hidden xl:block 2xl:block">
+        <ul class="flex items-center justify-center gap-x-4">
+          <li class="text-[10px] uppercase tracking-widest after:content-['|'] ">
+            <a href="#" class="hover:underline">careers</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">news</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">privacy policy</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">cookie policy</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">terms of use</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">landrover.co.uk</a>
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">accessories store</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest after:content-['|']">
+            <a href="#" class="hover:underline">land rover classic</a>
+            <!-- <span>|</span> -->
+          </li>
+          <li class="text-[10px] uppercase tracking-widest">
+            <a href="#" class="hover:underline">land rover experience</a>
+            <!-- <span>|</span> -->
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bottome Footer -->
+    <footer class="flex items-center justify-center">
+      <main class="flex items-center justify-center flex-col py-10">
+        <div class="flex items-center justify-center text-[#0C121C] text-[12px]">
+          <p class="opacity-40">Ship to : </p>
+          <figure class="w-[25px] h-[25px]">
+            <img src="/assets/flag.png" alt="none" class="w-full h-full object-cover" />
+          </figure>
+        </div>
+        <span class="text-[12px] opacity-40 uppercase pt-6"> &#169; JAGUAR LAND ROVER LIMITED 2023</span>
+        <div class="flex items-center justify-center flex-col pt-6 pb-8">
+          <p class="text-[12px] opacity-40 sm:text-center">Registered Office: Abbey Road, Whitley, Coventry CV3 4LF</p>
+          <p class="text-[12px] opacity-40 sm:text-center">Registered in England No: 1672070. VAT Registration No: GB927153228.</p>
+        </div>
+      </main>
+    </footer>
+  </section>
+  <script type="module" src="/main.js"></script>
+
+ 
+</body>
+
+</html>
